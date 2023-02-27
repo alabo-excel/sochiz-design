@@ -26,24 +26,24 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:w-[80%] sm:w-[85%] mx-auto">
-          <div className="flex justify-evenly mx-auto w-96 py-8">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
-              <div className="p-1 w-20 bg-white"></div>
-              <div className="p-1 w-20 bg-white mt-1"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl my-auto">
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
               Our Services
             </div>
           </div>
           <Slider />
         </div>
         <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
-          <div className="flex justify-evenly mx-auto w-96 py-8">
+        <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
-              <div className="p-1 w-20 bg-white"></div>
-              <div className="p-1 w-20 bg-white mt-1"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl my-auto">
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
               Creative Diary
             </div>
           </div>
