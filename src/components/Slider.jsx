@@ -27,7 +27,7 @@ export default () => {
       }}
     >
       <SwiperSlide>
-        <div className="p-3 py-8 border border-[#FFFFFF33] rounded-md">
+        <div className="p-4 py-8 border border-[#FFFFFF33] rounded-md">
           <img src="./stop.png" alt="" />
           <h1 className="text-[#FAD646] font-bold text-2xl my-3">
             Product Design

@@ -1,6 +1,10 @@
 import Slider from "@/components/Slider";
 import HeaderNav from "@/components/HeaderNav";
+import Card from "@/components/Card";
+import images from "../../public/images";
+
 export default function Home() {
+  const image = images;
   return (
     <>
       <HeaderNav />
@@ -27,10 +31,28 @@ export default function Home() {
               <div className="p-1 w-20 bg-white"></div>
               <div className="p-1 w-20 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl my-auto">Our Services</div>
+            <div className="text-white font-black text-4xl my-auto">
+              Our Services
+            </div>
           </div>
           <Slider />
         </div>
+        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+          <div className="flex justify-evenly mx-auto w-96 py-8">
+            <div className="my-auto">
+              <div className="p-1 w-20 bg-white"></div>
+              <div className="p-1 w-20 bg-white mt-1"></div>
+            </div>
+            <div className="text-white font-black text-4xl my-auto">
+              Creative Diary
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-between">
+            {image.map((single, index) => (
+              <Card key={index} img={single.img} />
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );

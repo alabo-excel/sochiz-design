@@ -1,9 +1,32 @@
 import Link from "next/link";
 import { useState } from "react";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Space } from "antd";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
-
+  const items = [
+    {
+      label: <Link href={"/"}>Product Design</Link>,
+      key: "0",
+    },
+    {
+      label: <Link href={"/"}>Animation</Link>,
+      key: "1",
+    },
+    {
+      label: <Link href={"/"}>Logo Design</Link>,
+      key: "2",
+    },
+    {
+      label: <Link href={"/"}>Creative Diary</Link>,
+      key: "3",
+    },
+    {
+      label: <Link href={"/"}>UI Design</Link>,
+      key: "4",
+    },
+  ];
   return (
     <nav className="w-full">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -63,13 +86,26 @@ export default function NavBar() {
                 </li>
                 <li className="text-white ">
                   <Link href={"/"}>About Us</Link>
-                </li>{" "}
+                </li>
                 <li className="text-white ">
                   <Link href={"/"}>Services</Link>
-                </li>{" "}
+                </li>
                 <li className="text-white ">
-                  <Link href={"/"}>Portfolio</Link>
-                </li>{" "}
+                  <Dropdown
+                    menu={{
+                      items,
+                    }}
+                    trigger={["click"]}
+                  >
+                    <a onClick={(e) => e.preventDefault()}>
+                      <Space>
+                        Portfolio
+                        <DownOutlined />
+                      </Space>
+                    </a>
+                  </Dropdown>
+                  {/* <Link href={"/"}>Portfolio</Link> */}
+                </li>
                 <li className="text-white ">
                   <Link href={"/"}>Contact Us</Link>
                 </li>
