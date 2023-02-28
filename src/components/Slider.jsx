@@ -36,8 +36,9 @@ export default () => {
             Product Design
           </h1>
           <p className="text-sm text-white">
-            Learn about the user experience (UX) industry and explore the basic
-            concepts and roles within the UX field.
+            We create beautiful product designs and packaging at the best
+            quality and taste. You can check out our product packaging page to
+            see more.
           </p>
         </div>
       </SwiperSlide>
@@ -45,11 +46,12 @@ export default () => {
         <div className="p-3 py-8 border border-[#FFFFFF33] rounded-md">
           <img src="./stop.png" alt="" />
           <h1 className="text-[#FAD646] font-bold text-2xl my-3">
-            Product Design
+            Logo Design
           </h1>
           <p className="text-sm text-white">
-            Learn about the user experience (UX) industry and explore the basic
-            concepts and roles within the UX field.
+            We create beautiful product designs and packaging at the best
+            quality and taste. You can check out our product packaging page to
+            see more.
           </p>
         </div>
       </SwiperSlide>
@@ -57,23 +59,34 @@ export default () => {
         <div className="p-3 py-8 border border-[#FFFFFF33] rounded-md">
           <img src="./stop.png" alt="" />
           <h1 className="text-[#FAD646] font-bold text-2xl my-3">
-            Product Design
+            Creative Diary
           </h1>
           <p className="text-sm text-white">
-            Learn about the user experience (UX) industry and explore the basic
-            concepts and roles within the UX field.
+            Looking for a way to stand out from the crowd? Creative design is
+            the answer. Whether you're looking to revamp your website, create
+            eye-catching social media graphics.
           </p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="p-3 py-8 border border-[#FFFFFF33] rounded-md">
           <img src="./stop.png" alt="" />
-          <h1 className="text-[#FAD646] font-bold text-2xl my-3">
-            Creative Dairy{" "}
-          </h1>
+          <h1 className="text-[#FAD646] font-bold text-2xl my-3">3D Designs</h1>
           <p className="text-sm text-white">
-            Learn about the user experience (UX) industry and explore the basic
-            concepts and roles within the UX field.
+            We create designs using the latest technology to create stunning 3D
+            arts that will make your brand stand out on anywhere. From product
+            renders to animated logos to immersive visual experiences.
+          </p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="p-3 py-8 border border-[#FFFFFF33] rounded-md">
+          <img src="./stop.png" alt="" />
+          <h1 className="text-[#FAD646] font-bold text-2xl my-3">Animation</h1>
+          <p className="text-sm text-white">
+            Bring your brand to life with our animation services! Animation is a
+            powerful tool for storytelling and engagement, and our team of
+            talented animators can help you create animations.
           </p>
         </div>
       </SwiperSlide>

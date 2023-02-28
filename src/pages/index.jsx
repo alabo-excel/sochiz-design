@@ -6,6 +6,7 @@ import uiux from "../../public/images/ui.json";
 import product from "../../public/images/product.json";
 import logod from "../../public/images/logo.json";
 import creatived from "../../public/images/creative.json";
+import { Fade, Slide } from "react-awesome-reveal";
 
 import Link from "next/link";
 
@@ -25,24 +26,26 @@ export default function Home() {
             <source src="./sochiz-short.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="lg:p-2 0 sm:py-20 md:p-8 lg:absolute lg:top-60 sm:top-0 lg:left-52">
-          <div className="lg:w-[60%] text-center mx-auto">
-            <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black capitalize text-white">
-              Best in Design, animation and
-              <span className="text-[#FEAE1B]">Creative Diary</span>
-            </div>
-            <div className="mt-8">
-              <a href="#service">
-                <button className="bg-[#1C2128] p-3 rounded-md text-white w-40 sm:w-80 sm:my-2 mx-2">
-                  Our Services
-                </button>
-              </a>
-              <a href="mailto:Sochizdesigns@gmail.com">
-                <button className="bg-[#FEAE1B] p-3 rounded-md mx-2 w-40  sm:w-80 sm:my-2">
-                  Contact Us
-                </button>
-              </a>
-            </div>
+        <div className="lg:p-2 0 sm:py-20 md:p-8 lg:absolute lg:top-60 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
+          <div className="">
+            <Fade delay={1e3}>
+              <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black capitalize text-white">
+                Best in Design, animation and
+                <span className="text-[#FEAE1B]">Creative Diary</span>
+              </div>
+              <div className="mt-8">
+                <a href="#service">
+                  <button className="bg-[#1C2128] p-3 rounded-md text-white w-40 sm:w-80 sm:my-2 mx-2">
+                    Our Services
+                  </button>
+                </a>
+                <a href="mailto:Sochizdesigns@gmail.com">
+                  <button className="bg-[#FEAE1B] p-3 rounded-md mx-2 w-40  sm:w-80 sm:my-2">
+                    Contact Us
+                  </button>
+                </a>
+              </div>
+            </Fade>
           </div>
         </div>
         <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
