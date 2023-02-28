@@ -1,7 +1,7 @@
 import Slider from "@/components/Slider";
 import HeaderNav from "@/components/HeaderNav";
 import Card from "@/components/Card";
-import ddesign from "../../public/images/CREATIVE.json";
+import ddesign from "../../public/images/creative.json";
 
 export default function Home() {
   const ddsign = ddesign;
