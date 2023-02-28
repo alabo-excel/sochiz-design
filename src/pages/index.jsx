@@ -8,10 +8,15 @@ export default function Home() {
   return (
     <>
       <HeaderNav />
-      <main>
-        <div className="lg:p-20 sm:py-14 md:p-8">
-          <div className="lg:w-[32%] text-center mx-auto">
-            <div className="text-3xl font-black capitalize text-white">
+      <main className="relative">
+        <div className="sm:hidden">
+          <video autoPlay muted loop >
+            <source src="./sochiz-short.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="lg:p-2 0 sm:py-20 md:p-8 lg:absolute lg:top-60 sm:top-0 lg:left-40">
+          <div className="lg:w-[60%] text-center mx-auto">
+            <div className="lg:text-5xl sm:text-3xl font-black capitalize text-white">
               Best in Design, animation and{" "}
               <span className="text-[#FEAE1B]">Creative Diary</span>{" "}
             </div>
@@ -38,7 +43,7 @@ export default function Home() {
           <Slider />
         </div>
         <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
-        <div className="flex justify-evenly mx-auto lg:w-96 py-8">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>

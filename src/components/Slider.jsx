@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,8 +12,7 @@ export default () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={3}
-      //   modules={[Navigation]}
-      //   navigation
+      modules={[Autoplay]}
       breakpoints={{
         340: {
           slidesPerView: 1,
@@ -24,6 +23,10 @@ export default () => {
         1024: {
           slidesPerView: 3,
         },
+      }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
       }}
     >
       <SwiperSlide>
