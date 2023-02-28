@@ -1,4 +1,4 @@
-import Slider from "@/components/Slider";
+// import Slider from "@/components/Slider";
 import HeaderNav from "@/components/HeaderNav";
 import Card from "@/components/Card";
 import ddesign from "../../public/images/creative.json";
