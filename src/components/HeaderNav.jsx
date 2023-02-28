@@ -7,23 +7,23 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const items = [
     {
-      label: <Link href={"/"}>Product Design</Link>,
+      label: <Link href={"/product-design"}>Product Design</Link>,
       key: "0",
     },
     {
-      label: <Link href={"/"}>Animation</Link>,
+      label: <Link href={"/animation"}>Animation</Link>,
       key: "1",
     },
     {
-      label: <Link href={"/"}>Logo Design</Link>,
+      label: <Link href={"/logo-design"}>Logo Design</Link>,
       key: "2",
     },
     {
-      label: <Link href={"/"}>Creative Diary</Link>,
+      label: <Link href={"/creative"}>Creative Diary</Link>,
       key: "3",
     },
     {
-      label: <Link href={"/"}>UI Design</Link>,
+      label: <Link href={"/ui-design"}>UI Design</Link>,
       key: "4",
     },
   ];

@@ -3,12 +3,18 @@ import HeaderNav from "@/components/HeaderNav";
 import Card from "@/components/Card";
 import ddesign from "../../public/images/3d.json";
 import uiux from "../../public/images/ui.json";
+import product from "../../public/images/product.json";
+import logod from "../../public/images/logo.json";
+import creatived from "../../public/images/creative.json";
 
 import Link from "next/link";
 
 export default function Home() {
   const ddsign = ddesign;
   const ui = uiux;
+  const productdesign = product;
+  const logo = logod;
+  const creative = creatived;
 
   return (
     <>
@@ -91,6 +97,75 @@ export default function Home() {
           </div>
           <div className="text-center text-white font-bold text-lg">
             <Link href={"ui-design"}>View More</Link>
+          </div>
+        </section>
+        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
+            <div className="my-auto">
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+            </div>
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+              Product Design
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-between">
+            {productdesign.slice(0, 6).map((single, index) => (
+              <Card
+                key={index}
+                img={"./PRODUCT-DESIGN/" + single.img}
+                title={single.title}
+              />
+            ))}
+          </div>
+          <div className="text-center text-white font-bold text-lg">
+            <Link href={"product-design"}>View More</Link>
+          </div>
+        </section>
+        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
+            <div className="my-auto">
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+            </div>
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+              Logo Design
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-between">
+            {logo.slice(0, 6).map((single, index) => (
+              <Card
+                key={index}
+                img={"./LOGO-DESIGN/" + single.img}
+                title={single.title}
+              />
+            ))}
+          </div>
+          <div className="text-center text-white font-bold text-lg">
+            <Link href={"logo-design"}>View More</Link>
+          </div>
+        </section>
+        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
+            <div className="my-auto">
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+            </div>
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+              Creative Diary
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-between">
+            {creative.slice(0, 6).map((single, index) => (
+              <Card
+                key={index}
+                img={"./CREATIVE-DIARY/" + single.img}
+                title={single.title}
+              />
+            ))}
+          </div>
+          <div className="text-center text-white font-bold text-lg">
+            <Link href={"creative"}>View More</Link>
           </div>
         </section>
       </main>
