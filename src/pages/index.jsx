@@ -114,7 +114,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg p-2 bg-[#FEAE1B] rounded-md w-44 mx-auto my-3">
+          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
             <Link href={"3d-design"}>View More</Link>
           </div>
         </section>
@@ -137,7 +137,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg">
+          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
             <Link href={"ui-design"}>View More</Link>
           </div>
         </section>
@@ -160,7 +160,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg">
+          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
             <Link href={"product-design"}>View More</Link>
           </div>
         </section>
@@ -183,7 +183,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg">
+          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
             <Link href={"logo-design"}>View More</Link>
           </div>
         </section>
@@ -206,7 +206,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg">
+          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
             <Link href={"creative"}>View More</Link>
           </div>
         </section>
