@@ -85,10 +85,10 @@ export default function NavBar() {
                   <Link href={"/"}>Home</Link>
                 </li>
                 <li className="text-white ">
-                  <Link href={"/"}>About Us</Link>
+                  <a href="#about">About Us</a>
                 </li>
                 <li className="text-white ">
-                  <Link href={"/"}>Services</Link>
+                  <a href="#service">Services</a>
                 </li>
                 <li className="text-white ">
                   <Dropdown
@@ -107,23 +107,29 @@ export default function NavBar() {
                   {/* <Link href={"/"}>Portfolio</Link> */}
                 </li>
                 <li className="text-white ">
-                  <Link href={"/"}>Contact Us</Link>
+                  <a href="mailto:Sochizdesigns@gmail.com">Contact Us</a>
                 </li>
               </ul>
               <div className="bg-[#1C1D26] flex justify-between sm:mt-8 px-8 lg:ml-20">
-                <a href="" className="p-2">
+                {/* <a href="" className="p-2">
                   <img src="./icons/facebook.svg" alt="" />
-                </a>
-                <a href="" className="p-2">
+                </a> */}
+                <a
+                  href="https://instagram.com/sochizdesigns?igshid=OTJlNzQ0NWM="
+                  className="p-2"
+                >
                   <img src="./icons/instagram.svg" alt="" />
-                </a>{" "}
-                <a href="" className="p-2">
+                </a>
+                {/* <a href="" className="p-2">
                   <img src="./icons/twitter.svg" alt="" />
-                </a>{" "}
-                <a href="" className="p-2">
+                </a> */}
+                <a href="mailto:Sochizdesigns@gmail.com" className="p-2">
                   <img src="./icons/mail.svg" alt="" />
-                </a>{" "}
-                <a href="" className="p-2">
+                </a>
+                <a
+                  href="https://youtube.com/@sochizdesigns-lf9kw"
+                  className="p-2"
+                >
                   <img src="./icons/youtube.svg" alt="" />
                 </a>
               </div>
