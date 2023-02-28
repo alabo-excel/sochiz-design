@@ -28,7 +28,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <nav className="w-full">
+    <nav className="w-full fixed top-0 h-20 z-10 bg-[#14151E]">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between md:block">
@@ -91,20 +91,7 @@ export default function NavBar() {
                   <a href="#service">Services</a>
                 </li>
                 <li className="text-white ">
-                  <Dropdown
-                    menu={{
-                      items,
-                    }}
-                    trigger={["click"]}
-                  >
-                    <a onClick={(e) => e.preventDefault()}>
-                      <Space>
-                        Portfolio
-                        <DownOutlined />
-                      </Space>
-                    </a>
-                  </Dropdown>
-                  {/* <Link href={"/"}>Portfolio</Link> */}
+                  <a href="#portfolio">Portfolio</a>
                 </li>
                 <li className="text-white ">
                   <a href="mailto:Sochizdesigns@gmail.com">Contact Us</a>
