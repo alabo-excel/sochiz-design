@@ -1,6 +1,6 @@
-import Slider from "@/components/Slider";
-import HeaderNav from "@/components/HeaderNav";
-import Card from "@/components/Card";
+import Slider from "../components/Slider";
+import HeaderNav from "../components/HeaderNav";
+import Card from "../components/Card";
 import ddesign from "../../public/images/logo.json";
 
 export default function Home() {

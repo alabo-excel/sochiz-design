@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Slider from "@/components/Slider";
-import HeaderNav from "@/components/HeaderNav";
-import Card from "@/components/Card";
+import Slider from "../components/Slider";
+import HeaderNav from "../components/HeaderNav";
+import Card from "../components/Card";
 import ddesign from "../../public/images/3d.json";
 import uiux from "../../public/images/ui.json";
 import product from "../../public/images/product.json";
