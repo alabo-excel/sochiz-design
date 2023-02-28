@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="lg:p-2 0 sm:py-20 md:p-8 lg:absolute lg:top-60 sm:top-0 lg:left-52">
           <div className="lg:w-[60%] text-center mx-auto">
-            <div className="lg:text-5xl sm:text-3xl leading-8 font-black capitalize text-white">
+            <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black capitalize text-white">
               Best in Design, animation and
               <span className="text-[#FEAE1B]">Creative Diary</span>
             </div>
