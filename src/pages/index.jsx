@@ -16,7 +16,7 @@ export default function Home() {
   const ui = uiux;
   const productdesign = product;
   const logo = logod;
-  const [all, setAll] = useState(logod);
+  const [all, setAll] = useState(logo);
   const [show, setShow] = useState(true);
   const [openModal, setOpenModal] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
@@ -176,9 +176,9 @@ export default function Home() {
               <img src="./line.png" alt="" />
             </div> */}
             <div
-              onClick={() => setAll(logod)}
+              onClick={() => setAll(logo)}
               className={
-                all === logod
+                all === logo
                   ? "text-[#FAD646] cursor-pointer text-base font-bold"
                   : "cursor-pointer text-base font-bold"
               }
