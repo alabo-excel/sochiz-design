@@ -1,66 +1,66 @@
 [
   {
-    "img": "autoe2.jpg",
+    "img": "./UI-DESIGN/autoe2.jpg",
     "title": "Auto E"
   },
   {
-    "img": "autoe.jpg",
+    "img": "./UI-DESIGN/autoe.jpg",
     "title": "Auto E 2"
   },
   {
-    "img": "beauty.jpg",
+    "img": "./UI-DESIGN/beauty.jpg",
     "title": "Beauty "
   },
   {
-    "img": "brownheritage.jpg",
+    "img": "./UI-DESIGN/brownheritage.jpg",
     "title": "Brown heritage"
   },
   {
-    "img": "Ewaen.jpg",
+    "img": "./UI-DESIGN/Ewaen.jpg",
     "title": "Ewaen"
   },
   {
-    "img": "fcmb.jpg",
+    "img": "./UI-DESIGN/fcmb.jpg",
     "title": "FCMB"
   },
   {
-    "img": "foodee.jpg",
+    "img": "./UI-DESIGN/foodee.jpg",
     "title": "foodee"
   },
   {
-    "img": "frontcover1.jpg",
+    "img": "./UI-DESIGN/frontcover1.jpg",
     "title": "Front Cover"
   },
   {
-    "img": "IMBD.jpg",
+    "img": "./UI-DESIGN/IMBD.jpg",
     "title": "IMBD"
   },
   {
-    "img": "mayvalerie.jpg",
+    "img": "./UI-DESIGN/mayvalerie.jpg",
     "title": "May Valerie"
   },
   {
-    "img": "ologe2.jpg",
+    "img": "./UI-DESIGN/ologe2.jpg",
     "title": "Ologe"
   },
   {
-    "img": "purehome.jpg",
+    "img": "./UI-DESIGN/purehome.jpg",
     "title": "Pure Home"
   },
   {
-    "img": "rchee.jpg",
+    "img": "./UI-DESIGN/rchee.jpg",
     "title": "Rchee"
   },
   {
-    "img": "SIA.jpg",
+    "img": "./UI-DESIGN/SIA.jpg",
     "title": "SIA"
   },
   {
-    "img": "shoeshub.jpg",
+    "img": "./UI-DESIGN/shoeshub.jpg",
     "title": "Shoe Hub"
   },
   {
-    "img": "UBA.jpg",
+    "img": "./UI-DESIGN/UBA.jpg",
     "title": "UBA"
   }
 ]

@@ -1,50 +1,50 @@
 [
   {
-    "img": "3dcamel.png",
+    "img": "./3D-DESIGN/3dcamel.png",
     "title": "3dcamel"
   },
   {
-    "img": "mayaviolin.jpg",
+    "img": "./3D-DESIGN/mayaviolin.jpg",
     "title": "Maya Violin"
   },
   {
-    "img": "NewViolin.jpg",
+    "img": "./3D-DESIGN/NewViolin.jpg",
     "title": "New Violin"
   },
   {
-    "img": "Setup.jpg",
+    "img": "./3D-DESIGN/Setup.jpg",
     "title": "Set up in 3D"
   },
   {
-    "img": "auditorium.jpg",
+    "img": "./3D-DESIGN/auditorium.jpg",
     "title": "Auditorium"
   },
   {
-    "img": "mainstudio.jpg",
+    "img": "./3D-DESIGN/mainstudio.jpg",
     "title": "Main Studio"
   },
   {
-    "img": "stage.jpg",
+    "img": "./3D-DESIGN/stage.jpg",
     "title": "Stage"
   },
   {
-    "img": "workspace.jpg",
+    "img": "./3D-DESIGN/workspace.jpg",
     "title": "Work Space"
   },
   {
-    "img": "OfficeSpace.jpg",
+    "img": "./3D-DESIGN/OfficeSpace.jpg",
     "title": "Office Space"
   },
   {
-    "img": "art.jpg",
+    "img": "./3D-DESIGN/art.jpg",
     "title": "Art"
   },
   {
-    "img": "Goldenstage.jpg",
+    "img": "./3D-DESIGN/Goldenstage.jpg",
     "title": "Golden Stage"
   },
   {
-    "img": "ciostage.jpg",
+    "img": "./3D-DESIGN/ciostage.jpg",
     "title": "CIO Stage"
   }
 ]

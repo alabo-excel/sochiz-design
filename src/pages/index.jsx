@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Slider from "../components/Slider";
 import HeaderNav from "../components/HeaderNav";
 import Card from "../components/Card";
@@ -7,8 +7,9 @@ import uiux from "../../public/images/ui.json";
 import product from "../../public/images/product.json";
 import logod from "../../public/images/logo.json";
 import creatived from "../../public/images/creative.json";
-
-import Link from "next/link";
+import { render } from "react-dom";
+import ImageViewer from "react-simple-image-viewer";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export default function Home() {
   const ddsign = ddesign;
@@ -16,9 +17,57 @@ export default function Home() {
   const productdesign = product;
   const logo = logod;
   const creative = creatived;
+  const [all, setAll] = useState([...ddsign, ...ui, ...productdesign, ...logo]);
 
   const [show, setShow] = useState(true);
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
+
+  const animation = [
+    {
+      img: "ENVOY-FOODS.mp4",
+      title: "Envoy Food",
+    },
+    {
+      img: "FAJI-KOTURE.mp4",
+      title: "Faji Koture",
+    },
+    {
+      img: "Instant-apt.mp4",
+      title: "Instant Apt",
+    },
+    {
+      img: "PANTHERS.mp4",
+      title: "Panther",
+    },
+    {
+      img: "RL-DESSERTS.mp4",
+      title: "RL Dessert",
+    },
+    {
+      img: "SINDY-MOTORS.mp4",
+      title: "Sindy Motors",
+    },
+    {
+      img: "COCO.mp4",
+      title: "Coco",
+    },
+    {
+      img: "ELSCUMADO.mp4",
+      title: "Elscumado",
+    },
+  ];
   useEffect(() => {
     if (window.innerWidth > 768) {
       setTimeout(() => {
@@ -36,7 +85,7 @@ export default function Home() {
             <source src="./sochiz-short.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="lg:p-2 0 sm:py-40 md:p-8 lg:absolute lg:top-80 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
+        <div className="lg:p-2 0 sm:pt-40 sm:pb-20 md:p-8 lg:absolute lg:top-80 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
           <div className={show ? "block" : "hidden"}>
             <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black capitalize text-white">
               Best in Design, animation and
@@ -56,26 +105,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
-          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
-            <div className="my-auto">
-              <div className="p-1 w-20 sm:w-10 bg-white"></div>
-              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
-            </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              Our Services
-            </div>
-          </div>
-          <Slider />
-        </div>
         <div id="about">
-          <div className="lg:flex lg:my-20 sm:mt-20 justify-between lg:w-[50%] mx-auto">
-            <div className="w-1/2 sm:w-full lg:p-10">
-              <img src="./main-image.jpg" alt="" />
-            </div>
-            <div className="w-1/2 sm:w-full sm:p-8 my-auto ">
-              <h1 className="text-4xl sm:text-xl font-bold text-[#FAD646]">
-                About <br /> Sochiz Design
+          <div className="lg:my-20 lg:w-[50%] mx-auto">
+            <div className="w-full sm:p-8 my-auto text-center">
+              <h1 className="text-4xl sm:text-2xl font-bold text-[#FAD646]">
+                About
+                {/* <br /> Sochiz Design */}
               </h1>
               <p className="text-white font-sm sm:text-sm mt-6">
                 Sochiz Design is a firm with 15 years of experience in providing
@@ -95,6 +130,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
+          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
+            <div className="my-auto">
+              <div className="p-1 w-20 sm:w-10 bg-white"></div>
+              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+            </div>
+            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+              What We Do
+            </div>
+          </div>
+          <Slider />
+        </div>
         <section id="portfolio" className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
           <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
@@ -102,115 +149,165 @@ export default function Home() {
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
             <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              3D Design
+              Portfolio
+            </div>
+          </div>
+          <div className="flex text-white sm:flex-wrap justify-evenly my-8">
+            <div
+              onClick={() =>
+                setAll([...ddsign, ...ui, ...productdesign, ...logo])
+              }
+              className={
+                all !== ddsign &&
+                all !== ui &&
+                all !== productdesign &&
+                all !== logod
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              SHOW ALL
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(logod)}
+              className={
+                all === logod
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              LOGO DESIGN
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(productdesign)}
+              className={
+                all === productdesign
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              PRODUCT DESIGN
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(ui)}
+              className={
+                all === ui
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              UI/UX DESIGN
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(ddsign)}
+              className={
+                all === ddsign
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              3D DESIGN
             </div>
           </div>
           <div className="flex flex-wrap">
-            {ddsign.slice(0, 6).map((single, index) => (
-              <Card
-                key={index}
-                img={"./3D-DESIGN/" + single.img}
-                title={single.title}
-              />
+            {all.map((src, index) => (
+              <div key={index} className=" rounded-md lg:w-1/3 sm:w-full">
+                <Slide>
+                  <img
+                    className="transition duration-500 hover:scale-75  hover:z-10  w-full h-52 object-cover"
+                    src={src.img}
+                    alt=""
+                    onClick={() => openImageViewer(index)}
+                  />
+                </Slide>
+              </div>
             ))}
-          </div>
-          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
-            <Link href={"3d-design"}>View More</Link>
+
+            {isViewerOpen && (
+              <ImageViewer
+                src={all.map((single) => single.img)}
+                currentIndex={currentImage}
+                disableScroll={true}
+                closeOnClickOutside={true}
+                onClose={closeImageViewer}
+              />
+            )}
           </div>
         </section>
-        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+        <section className="mt-10 lg:w-[100%] sm:w-[85%] mx-auto">
           <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
             <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              UI Design
+              Animation
             </div>
           </div>
           <div className="flex flex-wrap justify-between">
-            {ui.slice(0, 6).map((single, index) => (
-              <Card
-                key={index}
-                img={"./UI-DESIGN/" + single.img}
-                title={single.title}
-              />
+            {animation.map((single, index) => (
+              <div key={index} className="rounded-md w-[25%] my-3 sm:w-full">
+                <video autoPlay muted loop className="w-full lg:h-52">
+                  <source src={"./ANIMATION/" + single.img} type="video/mp4" />
+                </video>
+                {/* <div className="p-3 border border-[#FFFFFF33]">
+                  <h2 className="text-xl sm:text-base text-white">
+                    {single.title}
+                  </h2>
+                </div> */}
+              </div>
             ))}
           </div>
-          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
-            <Link href={"ui-design"}>View More</Link>
-          </div>
         </section>
-        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+        <section id="contact" className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
           <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
             <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              Product Design
+              Contact
             </div>
           </div>
-          <div className="flex flex-wrap justify-between">
-            {productdesign.slice(0, 6).map((single, index) => (
-              <Card
-                key={index}
-                img={"./PRODUCT-DESIGN/" + single.img}
-                title={single.title}
-              />
-            ))}
-          </div>
-          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
-            <Link href={"product-design"}>View More</Link>
-          </div>
-        </section>
-        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
-          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
-            <div className="my-auto">
-              <div className="p-1 w-20 sm:w-10 bg-white"></div>
-              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+          <div className="lg:flex justify-evenly">
+            <div className="lg:w-[20%]">
+              <label className="text-white text-sm">Your Name:*</label> <br />
+              <input type="text" className="p-3 bg-[#292929] w-full" />
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              Logo Design
+            <div className="lg:w-[20%]">
+              <label className="text-white text-sm">Email:*</label> <br />
+              <input type="text" className="p-3 bg-[#292929] w-full" />
             </div>
-          </div>
-          <div className="flex flex-wrap justify-between">
-            {logo.slice(0, 6).map((single, index) => (
-              <Card
-                key={index}
-                img={"./LOGO-DESIGN/" + single.img}
-                title={single.title}
-              />
-            ))}
-          </div>
-          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
-            <Link href={"logo-design"}>View More</Link>
-          </div>
-        </section>
-        <section className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
-          <div className="flex justify-evenly mx-auto lg:w-96 py-8">
-            <div className="my-auto">
-              <div className="p-1 w-20 sm:w-10 bg-white"></div>
-              <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
+            <div className="lg:w-[40%]">
+              <label className="text-white text-sm">Tell Us Everything:*</label>{" "}
+              <br />
+              <input type="text" className="p-3 bg-[#292929] w-full" />
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
-              Creative Diary
+            <div>
+              <label className="text-white text-sm"></label> <br />
+              <button className="p-3 bg-[#292929] text-[#FAD646]">
+                SUBMIT
+              </button>
             </div>
-          </div>
-          <div className="flex flex-wrap justify-between">
-            {creative.slice(0, 6).map((single, index) => (
-              <Card
-                key={index}
-                img={"./CREATIVE-DIARY/" + single.img}
-                title={single.title}
-              />
-            ))}
-          </div>
-          <div className="text-center text-white font-bold text-lg p-2 border rounded-md w-44 mx-auto my-3 ">
-            <Link href={"creative"}>View More</Link>
           </div>
         </section>
       </main>
+
+      <footer className="bg-[#292929] p-4 mt-16">
+        <div className="text-center text-white">Designed by Sochi</div>
+      </footer>
     </>
   );
 }

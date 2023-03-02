@@ -85,16 +85,16 @@ export default function NavBar() {
                   <Link href={"/"}>Home</Link>
                 </li>
                 <li className="text-white ">
-                  <a href="#about">About Us</a>
+                  <a href="#about">About</a>
                 </li>
-                <li className="text-white ">
+                {/* <li className="text-white ">
                   <a href="#service">Services</a>
-                </li>
+                </li> */}
                 <li className="text-white ">
                   <a href="#portfolio">Portfolio</a>
                 </li>
                 <li className="text-white ">
-                  <a href="mailto:Sochizdesigns@gmail.com">Contact Us</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
               <div className="bg-[#1C1D26] flex justify-between sm:mt-8 px-8 lg:ml-20">
