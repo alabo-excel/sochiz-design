@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <div className="lg:p-2 0 sm:pt-40 sm:pb-20 md:p-8 lg:absolute lg:top-80 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
           <div className={show ? "block" : "hidden"}>
-            <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black capitalize text-white">
+            <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black heading capitalize text-white">
               Best in Design, animation and
               <span className="text-[#FEAE1B]">Creative Diary</span>
             </div>
@@ -108,7 +108,7 @@ export default function Home() {
         <div id="about">
           <div className="lg:py-24 lg:w-[50%] mx-auto">
             <div className="w-full sm:p-8 my-auto text-center">
-              <h1 className="text-4xl sm:text-2xl font-bold text-[#FAD646]">
+              <h1 className="text-4xl sm:text-2xl heading font-bold text-[#FAD646]">
                 About
                 {/* <br /> Sochiz Design */}
               </h1>
@@ -136,7 +136,7 @@ export default function Home() {
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+            <div className="text-white font-black text-4xl heading sm:text-2xl my-auto">
               What We Do
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+            <div className="text-white font-black text-4xl heading sm:text-2xl my-auto">
               Portfolio
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function Home() {
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+            <div className="text-white font-black heading text-4xl sm:text-2xl my-auto">
               Animation
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function Home() {
               <div className="p-1 w-20 sm:w-10 bg-white"></div>
               <div className="p-1 w-20 sm:w-10 bg-white mt-1"></div>
             </div>
-            <div className="text-white font-black text-4xl sm:text-2xl my-auto">
+            <div className="text-white font-black text-4xl heading sm:text-2xl my-auto">
               Contact
             </div>
           </div>
