@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex text-white sm:flex-wrap justify-evenly my-8">
-            <div
+            {/* <div
               onClick={() =>
                 setAll([...ddsign, ...ui, ...productdesign, ...logo])
               }
@@ -170,7 +170,7 @@ export default function Home() {
             </div>
             <div>
               <img src="./line.png" alt="" />
-            </div>
+            </div> */}
             <div
               onClick={() => setAll(logod)}
               className={
