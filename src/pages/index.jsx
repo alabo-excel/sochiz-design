@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Slider from "../components/Slider";
 import HeaderNav from "../components/HeaderNav";
 import Card from "../components/Card";
@@ -7,23 +7,27 @@ import uiux from "../../public/images/ui.json";
 import product from "../../public/images/product.json";
 import logod from "../../public/images/logo.json";
 import creatived from "../../public/images/creative.json";
-import { render } from "react-dom";
 import ImageViewer from "react-simple-image-viewer";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
+import { Modal } from "antd";
 
 export default function Home() {
   const ddsign = ddesign;
   const ui = uiux;
   const productdesign = product;
   const logo = logod;
-  const creative = creatived;
-  const [all, setAll] = useState([...ddsign, ...ui, ...productdesign, ...logo]);
-
+  const [all, setAll] = useState(logod);
   const [show, setShow] = useState(true);
-
+  const [openModal, setOpenModal] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [single, setSingle] = useState({});
+  const videoRef = useRef(null);
 
+  function openSingle(single) {
+    setSingle(single);
+    setOpenModal(true);
+  }
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
@@ -36,35 +40,35 @@ export default function Home() {
 
   const animation = [
     {
-      img: "ENVOY-FOODS.mp4",
+      img: "./ANIMATION/ENVOY-FOODS.mp4",
       title: "Envoy Food",
     },
     {
-      img: "FAJI-KOTURE.mp4",
+      img: "./ANIMATION/FAJI-KOTURE.mp4",
       title: "Faji Koture",
     },
     {
-      img: "Instant-apt.mp4",
+      img: "./ANIMATION/Instant-apt.mp4",
       title: "Instant Apt",
     },
     {
-      img: "PANTHERS.mp4",
+      img: "./ANIMATION/PANTHERS.mp4",
       title: "Panther",
     },
     {
-      img: "RL-DESSERTS.mp4",
+      img: "./ANIMATION/RL-DESSERTS.mp4",
       title: "RL Dessert",
     },
     {
-      img: "SINDY-MOTORS.mp4",
+      img: "./ANIMATION/SINDY-MOTORS.mp4",
       title: "Sindy Motors",
     },
     {
-      img: "COCO.mp4",
+      img: "./ANIMATION/COCO.mp4",
       title: "Coco",
     },
     {
-      img: "ELSCUMADO.mp4",
+      img: "./ANIMATION/ELSCUMADO.mp4",
       title: "Elscumado",
     },
   ];
@@ -258,15 +262,14 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-between">
             {animation.map((single, index) => (
-              <div key={index} className="rounded-md w-[25%] my-3 sm:w-full">
+              <div
+                onClick={() => openSingle(single)}
+                key={index}
+                className="rounded-md w-[25%] my-3 sm:w-full cursor-pointer"
+              >
                 <video autoPlay muted loop className="w-full lg:h-52">
-                  <source src={"./ANIMATION/" + single.img} type="video/mp4" />
+                  <source src={single.img} type="video/mp4" />
                 </video>
-                {/* <div className="p-3 border border-[#FFFFFF33]">
-                  <h2 className="text-xl sm:text-base text-white">
-                    {single.title}
-                  </h2>
-                </div> */}
               </div>
             ))}
           </div>
@@ -304,7 +307,20 @@ export default function Home() {
           </div>
         </section>
       </main>
-
+      {openModal ? (
+        <Modal
+          title={single.title}
+          open={openModal}
+          footer={null}
+          onCancel={() => setOpenModal(!openModal)}
+          bodyStyle={{ padding: 0 }}
+          width={700}
+        >
+          <video autoPlay controls className="w-full">
+            <source src={single.img} type="video/mp4" />
+          </video>
+        </Modal>
+      ) : null}
       <footer className="bg-[#292929] p-4 mt-16">
         <div className="text-center text-white">Designed by Sochi</div>
       </footer>
