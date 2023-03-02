@@ -106,7 +106,7 @@ export default function Home() {
           </div>
         </div>
         <div id="about">
-          <div className="lg:my-20 lg:w-[50%] mx-auto">
+          <div className="lg:py-24 lg:w-[50%] mx-auto">
             <div className="w-full sm:p-8 my-auto text-center">
               <h1 className="text-4xl sm:text-2xl font-bold text-[#FAD646]">
                 About
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
           <Slider />
         </div>
-        <section id="portfolio" className="mt-10 lg:w-[80%] sm:w-[85%] mx-auto">
+        <section id="portfolio" className="pt-16 lg:w-[80%] sm:w-[85%] mx-auto">
           <div className="flex justify-evenly mx-auto lg:w-96 py-8">
             <div className="my-auto">
               <div className="p-1 w-20 sm:w-10 bg-white"></div>

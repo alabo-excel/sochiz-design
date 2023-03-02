@@ -81,19 +81,19 @@ export default function NavBar() {
           >
             <div className="lg:flex justify-between w-full">
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-white ">
+                <li className="text-white hover:text-[#FAD646]">
                   <Link href={"/"}>Home</Link>
                 </li>
-                <li className="text-white ">
+                <li className="text-white hover:text-[#FAD646]">
                   <a href="#about">About</a>
                 </li>
                 {/* <li className="text-white ">
                   <a href="#service">Services</a>
                 </li> */}
-                <li className="text-white ">
+                <li className="text-white hover:text-[#FAD646]">
                   <a href="#portfolio">Portfolio</a>
                 </li>
-                <li className="text-white ">
+                <li className="text-white hover:text-[#FAD646]">
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
