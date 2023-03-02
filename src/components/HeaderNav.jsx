@@ -28,7 +28,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <nav className="w-full fixed top-0 h-20 z-10 bg-[#14151E]">
+    <nav className="w-full fixed top-0 h-20 z-10 bg-black">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between md:block">
