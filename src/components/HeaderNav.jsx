@@ -79,7 +79,7 @@ export default function NavBar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <div className="lg:flex justify-between w-full">
+            <div className="lg:flex bg-black sm:p-2 justify-between w-full">
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-white hover:text-[#FAD646]">
                   <Link href={"/"}>Home</Link>
