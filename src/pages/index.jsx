@@ -84,14 +84,14 @@ export default function Home() {
     <>
       <HeaderNav />
       <main className="relative">
-        <div className="sm:hidden">
+        <div className="sm:mt-20">
           <video autoPlay muted loop>
             <source src="./sochiz-short.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="lg:p-2 0 sm:pt-40 sm:pb-20 md:p-8 lg:absolute lg:top-80 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
+        <div className="lg:p-2 sm:pb-20 md:p-8 lg:absolute lg:top-80 lg:w-[60%] text-center mx-auto sm:top-0 lg:left-[20%] lg:right-[20%]">
           <div className={show ? "block" : "hidden"}>
-            <div className="lg:text-5xl sm:px-10 sm:text-3xl leading-8 font-black heading capitalize text-white">
+            <div className="lg:text-5xl sm:absolute sm:top-16 sm:px-10 sm:text-3xl leading-8 font-black heading capitalize text-white">
               Welcome to <span className="text-[#FEAE1B]">Sochiz world</span>
               {/* <span className="text-[#FEAE1B]">Creative Diary</span> */}
             </div>
@@ -108,11 +108,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="lg:hidden">
-          <video autoPlay muted loop>
-            <source src="./sochiz-short.mp4" type="video/mp4" />
-          </video>
         </div>
         <div id="about">
           <div className="lg:py-24 lg:w-[50%] mx-auto">
