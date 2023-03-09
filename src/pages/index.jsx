@@ -125,7 +125,7 @@ export default function Home() {
                 design.
                 <br />
                 <br />
-                Our subsidiaries, Pentful Clothing and Pentful Arts are
+                Our subsidiaries, Pentul Clothing and Pentful Arts are
                 respectively two primary channels through which we fulfill our
                 mission objective of becoming your number 1 design solutions
                 firm. At Sochiz Design, we’re enthusiastic about transforming
