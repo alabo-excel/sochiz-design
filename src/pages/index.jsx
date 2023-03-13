@@ -73,11 +73,11 @@ export default function Home() {
     },
   ];
   useEffect(() => {
-    if (window.innerWidth > 768) {
-      setTimeout(() => {
-        setShow(false);
-      }, 4000);
-    }
+    // if (window.innerWidth > 768) {
+    setTimeout(() => {
+      setShow(false);
+    }, 4000);
+    // }
   }, []);
 
   return (
@@ -95,7 +95,7 @@ export default function Home() {
               Welcome to <span className="text-[#FEAE1B]">Sochiz world</span>
               {/* <span className="text-[#FEAE1B]">Creative Diary</span> */}
             </div>
-            <div className="mt-8">
+            <div className="mt-8 sm:hidden">
               <a href="#service">
                 <button className="bg-[#1C2128] p-3 rounded-md text-white w-40 sm:w-80 sm:my-2 mx-2">
                   Our Services
@@ -285,25 +285,50 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:flex justify-evenly">
-            <div className="lg:w-[20%]">
-              <label className="text-white text-sm">Your Name:*</label> <br />
-              <input type="text" className="p-3 bg-[#292929] w-full" />
-            </div>
-            <div className="lg:w-[20%]">
-              <label className="text-white text-sm">Email:*</label> <br />
-              <input type="text" className="p-3 bg-[#292929] w-full" />
-            </div>
-            <div className="lg:w-[40%]">
-              <label className="text-white text-sm">Tell Us Everything:*</label>{" "}
-              <br />
-              <input type="text" className="p-3 bg-[#292929] w-full" />
-            </div>
-            <div>
-              <label className="text-white text-sm"></label> <br />
-              <button className="p-3 bg-[#292929] text-[#FAD646]">
-                SUBMIT
-              </button>
-            </div>
+            <form action="https://formsubmit.co/sochizdesigns@gmail.com" method="POST">
+              <div className="lg:w-[20%]">
+                <label className="text-white text-sm">Your Name:*</label> <br />
+                <input
+                  type="text"
+                  name="name"
+                  className="p-3 bg-[#292929] w-full"
+                />
+              </div>
+              <div className="lg:w-[20%]">
+                <label className="text-white text-sm">Email:*</label> <br />
+                <input
+                  type="text"
+                  name="email"
+                  className="p-3 bg-[#292929] w-full"
+                />
+              </div>
+              <div className="lg:w-[40%]">
+                <label className="text-white text-sm">
+                  Tell Us Everything:*
+                </label>{" "}
+                <br />
+                <input
+                  type="text"
+                  name="message"
+                  className="p-3 bg-[#292929] w-full"
+                />
+              </div>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://sochizdesigns.com/"
+              />
+
+              <div>
+                <label className="text-white text-sm"></label> <br />
+                <button
+                  type="submit"
+                  className="p-3 bg-[#292929] text-[#FAD646]"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
           </div>
         </section>
       </main>
