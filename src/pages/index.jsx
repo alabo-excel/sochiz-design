@@ -294,7 +294,7 @@ export default function Home() {
                 <input
                   type="text"
                   name="name"
-                  className="p-3 bg-[#292929] w-full"
+                  className="p-3 bg-[#292929] text-white w-full"
                 />
               </div>
               <div className="lg:w-[20%]">
@@ -302,7 +302,7 @@ export default function Home() {
                 <input
                   type="text"
                   name="email"
-                  className="p-3 bg-[#292929] w-full"
+                  className="p-3 bg-[#292929] text-white w-full"
                 />
               </div>
               <div className="lg:w-[40%]">
@@ -313,7 +313,7 @@ export default function Home() {
                 <input
                   type="text"
                   name="message"
-                  className="p-3 bg-[#292929] w-full"
+                  className="p-3 bg-[#292929] text-white w-full"
                 />
               </div>
               <input
