@@ -102,7 +102,7 @@ export default function NavBar() {
                   <img src="./icons/facebook.svg" alt="" />
                 </a> */}
                 <a
-                  href="https://instagram.com/sochizdesigns?igshid=OTJlNzQ0NWM="
+                  href="https://instagram.com/sochiz_designs/"
                   className="p-2"
                 >
                   <img src="./icons/instagram.svg" alt="" />

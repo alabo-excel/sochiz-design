@@ -284,8 +284,11 @@ export default function Home() {
               Contact
             </div>
           </div>
-          <div className="lg:flex justify-evenly">
-            <form action="https://formsubmit.co/sochizdesigns@gmail.com" method="POST">
+          <form
+            action="https://formsubmit.co/sochizdesigns@gmail.com"
+            method="POST"
+          >
+            <div className="lg:flex justify-evenly">
               <div className="lg:w-[20%]">
                 <label className="text-white text-sm">Your Name:*</label> <br />
                 <input
@@ -328,8 +331,8 @@ export default function Home() {
                   SUBMIT
                 </button>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </section>
       </main>
       {openModal ? (
