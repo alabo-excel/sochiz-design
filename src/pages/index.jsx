@@ -6,7 +6,13 @@ import ddesign from "../../public/images/3d.json";
 import uiux from "../../public/images/ui.json";
 import product from "../../public/images/product.json";
 import logod from "../../public/images/logo.json";
-import creatived from "../../public/images/creative.json";
+import cover from "../../public/images/cover.json";
+import vector from "../../public/images/vector.json";
+import pencil from "../../public/images/pencil.json";
+import jean from "../../public/images/jean.json";
+import shoes from "../../public/images/shoes.json";
+import clothing from "../../public/images/clothing.json";
+
 import ImageViewer from "react-simple-image-viewer";
 import { Slide } from "react-awesome-reveal";
 import { Modal } from "antd";
@@ -109,9 +115,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="about">
-          <div className="lg:py-24 lg:w-[50%] mx-auto">
-            <div className="w-full sm:p-8 my-auto text-center">
+        <div id="about" className="flex my-10 justify-between">
+          <div className="lg:py-24 lg:w-[50%] p-10">
+            <div className="w-full sm:p-8 my-auto">
               <h1 className="text-4xl sm:text-2xl heading font-bold text-[#FAD646]">
                 About
                 {/* <br /> Sochiz Design */}
@@ -132,6 +138,14 @@ export default function Home() {
                 your design initiatives into reality.
               </p>
             </div>
+          </div>
+          <div className="w-1/2 grid grid-cols-3 gap-4">
+            <img src="/startups/16B97EC0-7FF1-4307-B5FD-F23CCED742E1.jpg" alt="" />
+            <img src="/startups/IMG_7858.jpg" alt="" />
+            <img src="/startups/IMG_7864.png" alt="" />
+            <img src="/startups/IMG_7865.jpg" alt="" />
+            <img src="/startups/IMG_8502.jpg" alt="" />
+            <img src="/startups/IMG_8503.png" className="h-52" alt="" />
           </div>
         </div>
         <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
@@ -157,24 +171,6 @@ export default function Home() {
             </div>
           </div>
           <div className="flex text-white sm:flex-wrap justify-evenly my-8">
-            {/* <div
-              onClick={() =>
-                setAll([...ddsign, ...ui, ...productdesign, ...logo])
-              }
-              className={
-                all !== ddsign &&
-                all !== ui &&
-                all !== productdesign &&
-                all !== logod
-                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
-                  : "cursor-pointer text-base font-bold"
-              }
-            >
-              SHOW ALL
-            </div>
-            <div>
-              <img src="./line.png" alt="" />
-            </div> */}
             <div
               onClick={() => setAll(logo)}
               className={
@@ -215,6 +211,19 @@ export default function Home() {
               <img src="./line.png" alt="" />
             </div>
             <div
+              onClick={() => setAll(cover)}
+              className={
+                all === cover
+                  ? "text-[#FAD646] uppercase cursor-pointer text-base font-bold"
+                  : "cursor-pointer uppercase text-base font-bold"
+              }
+            >
+              ⁠Email campaign & cover arts
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
               onClick={() => setAll(ddsign)}
               className={
                 all === ddsign
@@ -225,12 +234,77 @@ export default function Home() {
               3D DESIGN
             </div>
           </div>
+          <div className="flex text-white uppercase sm:flex-wrap justify-evenly my-8">
+
+            <div
+              onClick={() => setAll(vector)}
+              className={
+                all === vector
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              Vector design
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(pencil)}
+              className={
+                all === pencil
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              ⁠pencil works
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(clothing)}
+              className={
+                all === clothing
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              ⁠pentul cloths
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(jean)}
+              className={
+                all === jean
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              ⁠Jean jacket
+            </div>
+            <div>
+              <img src="./line.png" alt="" />
+            </div>
+            <div
+              onClick={() => setAll(shoes)}
+              className={
+                all === shoes
+                  ? "text-[#FAD646] cursor-pointer text-base font-bold"
+                  : "cursor-pointer text-base font-bold"
+              }
+            >
+              ⁠shoe design
+            </div>
+          </div>
           <div className="flex flex-wrap">
             {all.map((src, index) => (
               <div key={index} className=" rounded-md lg:w-1/3 sm:w-full">
                 <Slide>
                   <img
-                    className="transition duration-500 hover:scale-75  hover:z-10  w-full h-52 object-cover"
+                    className="transition duration-500 hover:scale-75  hover:z-10 w-full h-60 object-cover"
                     src={src.img}
                     alt=""
                     onClick={() => openImageViewer(index)}
