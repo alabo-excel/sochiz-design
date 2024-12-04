@@ -115,37 +115,29 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="about" className="flex my-10 justify-between">
-          <div className="lg:py-24 lg:w-[50%] p-10">
+        <div id="about" className="lg:flex my-10 justify-between">
+          <div className="lg:py-24 lg:w-[50%] lg:p-10">
             <div className="w-full sm:p-8 my-auto">
               <h1 className="text-4xl sm:text-2xl heading font-bold text-[#FAD646]">
                 About
                 {/* <br /> Sochiz Design */}
               </h1>
               <p className="text-white font-sm sm:text-sm mt-6">
-                Sochiz Design is a firm with 15 years of experience in providing
-                bespoke design services to an impressive range of customers.
-                Formerly known as Sochiz arts, we are a company that has
-                transformed and expanded to provide state-of-the-art services in
-                animation, advertisement design, as well as logo and brand
-                design.
+                Sochi, fondly known as Chuks, is a Senior Creative Director with over 10 years of experience in digital arts and design. He has been the driving force behind many startups and established brands in the arts, media, and entertainment industries. Known for his ability to turn ideas into reality, Sochi is a natural team player and leader who ensures every project he handles is delivered with excellence.
                 <br />
                 <br />
-                Our subsidiaries, Pentul Clothing and Pentful Arts are
-                respectively two primary channels through which we fulfill our
-                mission objective of becoming your number 1 design solutions
-                firm. At Sochiz Design, we’re enthusiastic about transforming
-                your design initiatives into reality.
+                Despite his young age, he has worked with top brands in roles ranging from freelance designer to project manager and creative head. He’s also deeply passionate about mentoring young designers, helping them grow their skills and confidence. Beyond design, Sochi wears many hats as a brand manager, musician, and entrepreneur, with creativity that flows seamlessly across all branches of the arts.
+
               </p>
             </div>
           </div>
-          <div className="w-1/2 grid grid-cols-3 gap-4">
+          <div className="lg:w-1/2 grid grid-cols-3 gap-4">
             <img src="/startups/16B97EC0-7FF1-4307-B5FD-F23CCED742E1.jpg" alt="" />
             <img src="/startups/IMG_7858.jpg" alt="" />
             <img src="/startups/IMG_7864.png" alt="" />
             <img src="/startups/IMG_7865.jpg" alt="" />
             <img src="/startups/IMG_8502.jpg" alt="" />
-            <img src="/startups/IMG_8503.png" className="h-52" alt="" />
+            <img src="/startups/IMG_8503.png" className="lg:h-52" alt="" />
           </div>
         </div>
         <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
