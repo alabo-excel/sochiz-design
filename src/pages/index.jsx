@@ -46,36 +46,36 @@ export default function Home() {
 
   const animation = [
     {
+      img: "./ANIMATION/ELSCUMADO.mp4",
+      title: "ELSCUMADO",
+    },
+    {
       img: "./ANIMATION/ENVOY-FOODS.mp4",
-      title: "Envoy Food",
+      title: "ENVOY FOODS",
     },
     {
-      img: "./ANIMATION/FAJI-KOTURE.mp4",
-      title: "Faji Koture",
-    },
-    {
-      img: "./ANIMATION/Instant-apt.mp4",
-      title: "Instant Apt",
+      img: "./ANIMATION/How-zebra-got-its-black-stripes-cartoon.mp4",
+      title: "How zebra got its black stripes cartoon",
     },
     {
       img: "./ANIMATION/PANTHERS.mp4",
       title: "Panther",
     },
     {
-      img: "./ANIMATION/RL-DESSERTS.mp4",
-      title: "RL Dessert",
-    },
-    {
       img: "./ANIMATION/SINDY-MOTORS.mp4",
-      title: "Sindy Motors",
+      title: "SINDY MOTORS",
     },
     {
-      img: "./ANIMATION/COCO.mp4",
-      title: "Coco",
+      img: "./ANIMATION/Instant-apt.mp4",
+      title: "Instant apt",
     },
     {
-      img: "./ANIMATION/ELSCUMADO.mp4",
-      title: "Elscumado",
+      img: "./ANIMATION/Logo-Montage-Showreel.mp4",
+      title: "Logo Montage Showreel",
+    },
+    {
+      img: "./ANIMATION/My2024Motiongraphics.mp4",
+      title: "My 2024 Motion graphics",
     },
   ];
   useEffect(() => {
