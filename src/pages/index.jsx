@@ -127,17 +127,24 @@ export default function Home() {
                 <br />
                 <br />
                 Despite his young age, he has worked with top brands in roles ranging from freelance designer to project manager and creative head. He’s also deeply passionate about mentoring young designers, helping them grow their skills and confidence. Beyond design, Sochi wears many hats as a brand manager, musician, and entrepreneur, with creativity that flows seamlessly across all branches of the arts.
-
               </p>
+              <a href="/Ezeji_CV2.pdf" target="_blank">
+                <button className="bg-[#FAD646] my-6 p-3 px-6">Download Cv</button>
+              </a>
             </div>
           </div>
-          <div className="lg:w-1/2 grid grid-cols-3 gap-4">
-            <img src="/startups/16B97EC0-7FF1-4307-B5FD-F23CCED742E1.jpg" alt="" />
-            <img src="/startups/IMG_7858.jpg" alt="" />
-            <img src="/startups/IMG_7864.png" alt="" />
-            <img src="/startups/IMG_7865.jpg" alt="" />
-            <img src="/startups/IMG_8502.jpg" alt="" />
-            <img src="/startups/IMG_8503.png" className="lg:h-52" alt="" />
+          <div className="lg:w-1/2 my-auto">
+            <h1 className="text-4xl my-6 sm:text-2xl heading font-bold text-[#FAD646]">
+              Startup
+            </h1>
+            <div className="grid grid-cols-3 gap-4">
+              <img src="/startups/16B97EC0-7FF1-4307-B5FD-F23CCED742E1.jpg" alt="" />
+              <img src="/startups/IMG_7858.jpg" alt="" />
+              <img src="/startups/IMG_7864.png" alt="" />
+              <img src="/startups/IMG_7865.jpg" alt="" />
+              <img src="/startups/IMG_8502.jpg" alt="" />
+              <img src="/startups/PENTUL-CLTHING.jpg" className="" alt="" />
+            </div>
           </div>
         </div>
         <div id="service" className="lg:w-[80%] sm:w-[85%] mx-auto">
