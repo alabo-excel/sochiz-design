@@ -129,16 +129,16 @@ export default function Home() {
                 Despite his young age, he has worked with top brands in roles ranging from freelance designer to project manager and creative head. He’s also deeply passionate about mentoring young designers, helping them grow their skills and confidence. Beyond design, Sochi wears many hats as a brand manager, musician, and entrepreneur, with creativity that flows seamlessly across all branches of the arts.
               </p>
               <a href="/Ezeji_CV2.pdf" target="_blank">
-                <button className="bg-[#FAD646] my-6 p-3 px-6">Download Cv</button>
+                <button className="bg-[#FAD646] my-6 p-3 px-6">Download Resume</button>
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2 my-auto">
+          <div className="lg:w-1/2 my-auto sm:p-6 ">
             <h1 className="text-4xl my-6 sm:text-2xl heading font-bold text-[#FAD646]">
               Startup
             </h1>
             <div className="grid grid-cols-3 gap-4">
-              <img src="/startups/16B97EC0-7FF1-4307-B5FD-F23CCED742E1.jpg" alt="" />
+              <img src="/startups/wonderland.jpg" alt="" />
               <img src="/startups/IMG_7858.jpg" alt="" />
               <img src="/startups/IMG_7864.png" alt="" />
               <img src="/startups/IMG_7865.jpg" alt="" />
@@ -298,9 +298,9 @@ export default function Home() {
               ⁠shoe design
             </div>
           </div>
-          <div className="flex flex-wrap">
+          <div className="lg:grid grid-cols-4">
             {all.map((src, index) => (
-              <div key={index} className=" rounded-md lg:w-1/3 sm:w-full">
+              <div key={index} className=" rounded-md sm:w-full">
                 <Slide>
                   <img
                     className="transition duration-500 hover:scale-75  hover:z-10 w-full h-60 object-cover"
